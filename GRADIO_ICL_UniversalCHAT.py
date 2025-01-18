@@ -88,11 +88,14 @@ with gr.Blocks(fill_width=True,theme=theme) as demo:
         with gr.Column(scale=2):
             ERRORbox = gr.Text(label='STATUS MESSAGE',value='',container=True,scale=1)        
         with gr.Column(scale=3):        
-                title = gr.Markdown(
+                title = gr.HTML(
             f"""
-            ## Advanced AI ChatBot Interface 
-            - Running *{MODELNAME}* with llamaCPP-server 
-            - Context window: {NCTX} tokens""") 
+            <center>
+                <h1>Advanced AI ChatBot Interface</h1>
+                <p>- Running {MODELNAME} with llamaCPP-server</p>
+                <p>- Context window: {NCTX} tokens</p>
+            </center>
+            """) 
     with gr.Row():
         #HYPERPARAMETERS
         with gr.Column(scale=1):
